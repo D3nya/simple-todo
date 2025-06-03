@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import type { TodoStateType } from "../context/todoTypes";
 import { mockDispatch } from "./setupTests";
 import { TodoContext } from "../context/TodoContext/TodoContext";
+import type { TodoStateType } from "../types/todo";
 
 const defaultState: TodoStateType = {
   todos: [],

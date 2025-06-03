@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { fireEvent, screen } from "@testing-library/react";
 import TodoFilter from "./TodoFilter";
 import { renderWithTodoProvider } from "../../../../../test/test-utils";
-import type { TodoStateType } from "../../../../../context/todoTypes";
 import { mockDispatch } from "../../../../../test/setupTests";
+import type { TodoStateType } from "../../../../../types/todo";
 
 describe("TodoFilter", () => {
   it("renders all filter buttons", () => {

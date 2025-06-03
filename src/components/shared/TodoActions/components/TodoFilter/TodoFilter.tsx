@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../../../ui/button";
-import type { TodoFilterType } from "../../../../../context/todoTypes";
 import { useTodoContext } from "../../../../../context/TodoContext/TodoContext";
+import type { TodoFilterType } from "../../../../../types/todo";
 
 const filters: TodoFilterType[] = ["all", "active", "completed"];
 
