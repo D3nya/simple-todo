@@ -3,9 +3,9 @@ import { Checkbox } from "../../ui/checkbox";
 import { Button } from "../../ui/button";
 import { X } from "lucide-react";
 import { Separator } from "../../ui/separator";
-import type { TodoType } from "../../../context/todoTypes";
-import { useTodoContext } from "../../../context/TodoContext";
 import { cn } from "../../../lib/utils";
+import { useTodoContext } from "../../../context/TodoContext/TodoContext";
+import type { TodoType } from "../../../types/todo";
 
 interface TodoItemProps {
   todo: TodoType;
@@ -20,6 +20,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo: { id, status, text } }
         <Checkbox
           className="size-6"
           checked={status}
+          aria-label={status ? "Mark todo as incomplete" : "Mark todo as complete"}
           onCheckedChange={() => dispatch({ type: "TOGGLE_TODO", payload: id })}
         />
         <div>
@@ -37,9 +38,10 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo: { id, status, text } }
           size="icon"
           variant="destructive"
           className="size-6"
+          aria-label="Delete todo"
           onClick={() => dispatch({ type: "DELETE_TODO", payload: id })}
         >
-          <X />
+          <X className="size-4" />
         </Button>
       </div>
       <Separator className="mt-2" />

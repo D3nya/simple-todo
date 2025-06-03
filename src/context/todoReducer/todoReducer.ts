@@ -1,5 +1,5 @@
-import { generateId } from "../lib/generateId";
-import type { TodoActionType, TodoStateType } from "./todoTypes";
+import { generateId } from "../../lib/generateId";
+import type { TodoActionType, TodoStateType } from "../../types/todo";
 
 export const initialState: TodoStateType = {
   todos: [],

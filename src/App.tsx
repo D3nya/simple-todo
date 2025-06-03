@@ -2,7 +2,7 @@ import TodoActions from "./components/shared/TodoActions/TodoActions";
 import TodoInput from "./components/shared/TodoInput/TodoInput";
 import TodoList from "./components/shared/TodoList/TodoList";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./components/ui/card";
-import TodoProvider from "./context/TodoProvider";
+import TodoProvider from "./context/TodoProvider/TodoProvider";
 
 function App() {
   return (

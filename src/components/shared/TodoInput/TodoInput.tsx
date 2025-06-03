@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "../../ui/input";
-import { useTodoContext } from "../../../context/TodoContext";
 import { Button } from "../../ui/button";
+import { useTodoContext } from "../../../context/TodoContext/TodoContext";
 
 export const TodoInput: React.FC = () => {
   const [value, setValue] = React.useState("");
@@ -18,7 +18,7 @@ export const TodoInput: React.FC = () => {
     }
 
     if (trimmedText.length > 200) {
-      alert("Text muse be less 200 characters!");
+      alert("Text must be less 200 characters!");
       return;
     }
 

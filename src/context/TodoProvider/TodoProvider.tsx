@@ -1,12 +1,13 @@
 import React, { useEffect, useReducer } from "react";
-import { TodoContext } from "./TodoContext";
-import { initialState, todoReducer } from "./todoReducer";
+
+import { TodoContext } from "../TodoContext/TodoContext";
+import { initialState, todoReducer } from "../todoReducer/todoReducer";
 
 interface TodoProviderProps {
   children: React.ReactNode;
 }
 
-const STORAGE_KEY = "todoAppState";
+export const STORAGE_KEY = "todoAppState";
 
 export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(todoReducer, initialState, (initial) => {

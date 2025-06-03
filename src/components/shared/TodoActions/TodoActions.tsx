@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "../../ui/button";
-import TodoFilter from "./components/TodoFilter";
-import { useTodoContext } from "../../../context/TodoContext";
-import TodoCounter from "./components/TodoCounter";
+import TodoCounter from "./components/TodoCounter/TodoCounter";
+import TodoFilter from "./components/TodoFilter/TodoFilter";
+import { useTodoContext } from "../../../context/TodoContext/TodoContext";
 
 const TodoActions: React.FC = () => {
   const { state, dispatch } = useTodoContext();
@@ -25,6 +25,7 @@ const TodoActions: React.FC = () => {
         title="Clear all completed tasks"
         onClick={() => dispatch({ type: "CLEAR_COMPLETED" })}
         disabled={!hasCompleted}
+        aria-label="Clear completed tasks"
       >
         Clear completed
       </Button>
